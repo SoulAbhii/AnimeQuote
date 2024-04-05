@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.home{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+    height: 100vh;
+    z-index: -1; 
+    background-size: cover; 
+}
+
+
+body{
+    
+    color: white;
+    
+}
+
+.headm{
+    display: flex;
+    justify-content: center;
+}
+.head{
+    text-align: center;
+    font-size: 1.5em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+    color: transparent;
+    position: relative;
+    top: 5.5rem;
+    -webkit-text-stroke: 2px #01F34E;
+}
+.head::before{
+    content: "AnimeQuote";
+    position: absolute;
+    width: 0%;
+    overflow: hidden;
+    color: #01F34E;
+    border-right: 2px solid #01F34E;
+    transition: 1s ease-in-out;
+}
+.head:hover::before{
+    width: 100%;
+    filter: drop-shadow(0 0 25px #01F34E);
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    
+
+}
+
+
+.glass{
+    text-align: center;
+    height: 30rem;
+    width: 100rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    overflow-y: auto;
+}
+.glass p{
+    color: white;
+    position: relative;
+    top: 4rem;
+    font-size: 40px;
+    font-weight: 100;
+    font-style: italic;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    filter: drop-shadow(0 0 25px rgb(255, 255, 255));
+
+}
+
+
+.btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+button{
+    position: relative;
+    bottom: 1rem;
+    height: 4rem;
+    border-radius: 15px;
+    background: #09cc02;;
+    /* background: linear-gradient(100deg, #03428b, #35f301); */
+    color: white;
+    width: 20rem;
+    font-size: large;
+    font-weight: 600;
+    border: 1px solid white;
+    transition: ease all 0.6s;
+}
+button:hover{
+    background-color: rgb(2, 19, 76);
+    color: white;
+    filter: drop-shadow(0 0 15px rgb(2, 19 ,76));
+}
+img{
+    height: 200px;
+    width: 180px;
+    filter: drop-shadow(0 0 50px black);
+    transition: 1.6s ease-in-out;
+}
+img:hover{  
+    filter: drop-shadow(0 0 50px red);
+}
+@media only screen and (max-width: 600px) {
+    .head {
+        font-size: 1.2em;
+        top: 8rem;
+    }
+    
+    .glass {
+        height: auto;
+        width: 90%;
+        margin: 2rem auto;
+        padding: 1rem;
+    }
+    
+    .glass p {
+        font-size: 24px;
+    }
+    
+    button {
+        position: relative;
+        bottom: 2rem;
+        width: 80%;
+    }
+    img{
+        position: relative;
+        top: 2rem;
+    }
+}
